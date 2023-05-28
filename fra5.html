@@ -1,0 +1,82 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Stemania | Fractions</title>
+    <link rel="stylesheet" href="css/fra5.css"> 
+    <script> function restartPage()
+             { location.reload(); }</script>
+  </head> 
+  <body> 
+    <div class="game-container"> 
+      <div class="header">
+        <div class="left-buttons">
+          <div id="lefty">       
+        <a href="category.html">
+             <button id="return"></button>  
+              </a>   
+        </div>
+        <span id="problemtitle">
+            Fraction <br>Problem #5
+        </span>
+         <div id="righty">       
+        <button id="play-button"></button> 
+        <button id="restart" onclick="restartPage()"></button>
+      </div>
+    </div>
+  </div>
+      <video id="video-player" autoplay >  
+        <source src="ani/fra5.mp4" type="video/mp4"> 
+      </video> 
+      <div id="page">
+        <div class="info">
+          <h6 id="question"> A recipe for a salad dressing calls for a ratio of 9 parts oil to 16 parts vinegar. A chef wants to make a smaller batch of the dressing using 8/13 parts of vinegar. To maintain the ratio, how much oil should the chef use?
+          </h6>
+          <span class="steps">5/5</span>
+        </div>
+        <div id="answer-options" class="radio-input">
+          <input type="radio" id="value-1" name="value-radio" value="value-1">
+          <label for="value-1">1 and 1/5 cups
+</label>
+          <input type="radio" id="value-2" name="value-radio" value="value-2">
+          <label for="value-2">9/10 cups
+</label>
+          <input type="radio" id="value-3" name="value-radio" value="value-3">
+          <label for="value-3">3/5 cups
+</label>
+          <input type="radio" id="value-4" name="value-radio" value="value-4">
+          <label for="value-4"> 1 and 1/2 cups
+</label>
+          <span class="result success">Congratulations!</span>
+          <span class="result error">Bad answer</span>
+     
+        </div> 
+
+        <button id="dropdown-btn" onclick="toggleDropdown()" class="closed">
+            Show Rationale
+            <svg class="dropdown-icon" id="dropdown-icon" onclick="toggleDropdown()"            viewBox="0 0 24 24" >
+              
+                <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+            </svg>
+        </button> 
+        <ul id="dropdown-list">
+            <li onclick="openVideoPopup('rationale/fra5E.mp4')">English<span class="arrow">▶</span></li>
+            <li onclick="openVideoPopup('rationale/fra5T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
+ <div id="video-popup-overlay">
+      <div id="video-popup-container">
+           <video id="video-popup-player" controls>               
+           </video>
+            <button id="close-video-popup" onclick="closeVideoPopup()">Close</button> 
+            </div>            
+     </div>     
+         </div>  
+    <button class="back-button" onclick="goBack()">❮Previous</button> 
+    <button id="soundButton" class="sound-on" onclick="toggleSound()">
+  <span id="soundIcon" class="sound-icon"></span>
+</button>
+    
+    <script src="fra5.js"></script> 
+  </body> 
+</html>

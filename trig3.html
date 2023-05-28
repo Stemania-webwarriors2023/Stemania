@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Stemania | Fractions</title>
+    <link rel="stylesheet" href="css/trig3.css"> 
+    <script> function restartPage()
+             { location.reload(); }</script>
+  </head> 
+  <body> 
+    <div class="game-container"> 
+      <div class="header">
+        <div class="left-buttons">
+          <div id="lefty">       
+        <a href="category.html">
+             <button id="return"></button>  
+              </a>   
+        </div>
+        <span id="problemtitle">
+            Trigonometry <br>Problem #3
+        </span>
+         <div id="righty">       
+        <button id="play-button"></button> 
+        <button id="restart" onclick="restartPage()"></button>
+      </div>
+    </div>
+  </div>
+      <video id="video-player" autoplay >  
+        <source src="ani/trig3.mp4" type="video/mp4"> 
+      </video> 
+      <div id="page">
+        <div class="info">
+          <h6 id="question"> Izzy was in their basement 42 meters below their living room. She wanted to be above, in their living room. She turned diagonally for 100 meters until she was above ground. What is the angle of elevation, in degrees, of Izzy's climb?
+
+          </h6>
+          <span class="steps">3/3</span>
+        </div>
+        <div id="answer-options" class="radio-input">
+          <input type="radio" id="value-1" name="value-radio" value="value-1">
+          <label for="value-1">24.8°
+</label>
+          <input type="radio" id="value-2" name="value-radio" value="value-2">
+          <label for="value-2">20.4°
+</label>
+          <input type="radio" id="value-3" name="value-radio" value="value-3">
+          <label for="value-3">28.1°
+</label>
+          <input type="radio" id="value-4" name="value-radio" value="value-4">
+          <label for="value-4">32.5°
+</label>
+          <span class="result success">Congratulations!</span>
+          <span class="result error">Bad answer</span>
+     
+        </div> 
+
+        <button id="dropdown-btn" onclick="toggleDropdown()" class="closed">
+            Show Rationale
+            <svg class="dropdown-icon" id="dropdown-icon" onclick="toggleDropdown()"            viewBox="0 0 24 24" >
+              
+                <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+            </svg>
+        </button> 
+        <ul id="dropdown-list">
+            <li onclick="openVideoPopup('rationale/trig3E.mp4')">English<span class="arrow">▶</span></li>
+            <li onclick="openVideoPopup('rationale/trig3T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
+ <div id="video-popup-overlay">
+      <div id="video-popup-container">
+           <video id="video-popup-player" controls>               
+           </video>
+            <button id="close-video-popup" onclick="closeVideoPopup()">Close</button> 
+            </div>            
+     </div>     
+         </div>  
+    <button class="back-button" onclick="goBack()">❮Previous</button> 
+    <button id="soundButton" class="sound-on" onclick="toggleSound()">
+  <span id="soundIcon" class="sound-icon"></span>
+</button>
+    
+    <script src="trig3.js"></script> 
+  </body> 
+</html>
