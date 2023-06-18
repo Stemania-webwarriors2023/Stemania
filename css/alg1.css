@@ -5,8 +5,69 @@ body {
     background-repeat: no-repeat;
     background-size: cover;    
   } 
-  
 
+ 
+  .overlay-hint {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+
+  /* Styles for the skip button */
+  .skip-button {
+position: fixed;
+bottom: 10px;
+right: 10px;
+padding: 10px;
+font-size: 18px;
+border: solid #6acbff;
+border-radius: 10px;
+cursor: pointer;
+z-index: 9999;
+font-family: 'Pangolin';
+background-color: #1899D6;
+color: white; 
+outline: none;
+}
+
+.skip-button:hover {
+background-color: #1899D6;
+}
+
+
+  .overlay-image-desktop {
+    display: none; 
+    z-index: 10001;
+    width: 800px;
+    height: auto;
+  }
+
+  .overlay-image-mobile {
+    display: none;
+    z-index: 10001;
+    width: 80%;
+    height: 80%;
+  }
+
+  @media only screen and (min-width: 768px) {
+
+    .overlay-image-desktop {
+      display: block; 
+    }
+  }
+
+  @media only screen and (max-width: 767px) {
+    .overlay-image-mobile {
+      display: block;
+    }
+  }
 
   #game-container { 
     margin: 0 auto;
@@ -443,6 +504,7 @@ align-items: center;
         #dropdown-list li {
             padding: 5px;
             cursor: pointer; 
+
         }
         
         
@@ -450,12 +512,15 @@ align-items: center;
         #dropdown-list li a {
             text-decoration: none;
             color: #000;
+
+
         }
 
         #dropdown-list.open {
             display: block;
             opacity: 1;
             max-height: 200px;
+            z-index: 6;
         }
        
 #video-popup-overlay {
@@ -468,17 +533,20 @@ align-items: center;
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 9;
 }
 
 #video-popup-container {
   position: relative;
   width: 50%; 
   height: 50%; 
+
 }
 
 #video-popup-player {
   width: 100%;
   height: -100%;
+
 }
 
 #close-video-popup {
@@ -490,6 +558,7 @@ align-items: center;
   color: white;
   font-family: 'Pangolin';
   border: solid white;
+  z-index: 9;
 }
 
 #video-popup-overlay.show {
@@ -748,7 +817,7 @@ body{
     height: 100vh;
     
 }
-}
+
 @media (min-width: 749px) {
 .header{  
    margin-left: 35px;
