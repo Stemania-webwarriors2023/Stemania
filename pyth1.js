@@ -94,3 +94,11 @@ function toggleDropdown() {
   var dropdownList = document.getElementById('dropdown-list');
   dropdownList.classList.toggle('open');
 }
+
+function skipOverlay() {
+  var overlay = document.querySelector('.overlay-hint');
+  var skipButton = document.querySelector('.skip-button');
+  
+  overlay.style.display = 'none';
+  skipButton.style.display = 'none';
+}

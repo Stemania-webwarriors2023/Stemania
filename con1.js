@@ -105,3 +105,11 @@ function toggleDropdown() {
 }
 
 function goBack() { window.history.back(); } 
+
+function skipOverlay() {
+  var overlay = document.querySelector('.overlay-hint');
+  var skipButton = document.querySelector('.skip-button');
+  
+  overlay.style.display = 'none';
+  skipButton.style.display = 'none';
+}

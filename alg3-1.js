@@ -12,9 +12,9 @@ playButton.addEventListener('click', function() {
 
 answerOptions.addEventListener('click', function(event) {
   if (event.target.tagName === 'INPUT') {
-    let isCorrectAnswer = event.target.value === 'value-2';
+    let isCorrectAnswer = event.target.value === 'value-4';
     let resultClass = isCorrectAnswer ? '.result.success' : '.result.error';
-    let nextVideo = isCorrectAnswer ? 'ani/fra1O.mp4' : 'ani/fra1X.mp4';
+    let nextVideo = isCorrectAnswer ? 'ani/alg3O.mp4' : 'ani/alg3X.mp4';
 
     video.src = nextVideo;
     document.querySelector(resultClass).style.display = 'flex';
@@ -25,7 +25,7 @@ answerOptions.addEventListener('click', function(event) {
       if (isCorrectAnswer) {
         nextButton.style.display = 'block';
       } else {
-        video.src = 'ani/fra1.mp4';
+        video.src = 'ani/alg3.mp4';
         video.play();
       }
     };
@@ -37,7 +37,7 @@ answerOptions.addEventListener('click', function(event) {
 });
 
 nextButton.addEventListener('click', function() {
-  window.location.href = 'fra2.html';
+  window.location.href = 'alg4.html';
 });
 
 var soundEnabled = true;
@@ -95,10 +95,4 @@ function toggleDropdown() {
   dropdownList.classList.toggle('open');
 }
 
-function skipOverlay() {
-  var overlay = document.querySelector('.overlay-hint');
-  var skipButton = document.querySelector('.skip-button');
-  
-  overlay.style.display = 'none';
-  skipButton.style.display = 'none';
-}
+function goBack() { window.history.back(); } 

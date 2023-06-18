@@ -94,3 +94,20 @@ function toggleDropdown() {
   var dropdownList = document.getElementById('dropdown-list');
   dropdownList.classList.toggle('open');
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var overlay = document.getElementById("overlay");
+  var skipButton = document.getElementById("skip-btn");
+
+  skipButton.addEventListener("click", function() {
+      overlay.style.display = "none";
+  });
+});
+
+function skipOverlay() {
+  var overlay = document.querySelector('.overlay-hint');
+  var skipButton = document.querySelector('.skip-button');
+  
+  overlay.style.display = 'none';
+  skipButton.style.display = 'none';
+}

@@ -6,10 +6,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
     <title>Stemania | Algebra</title>
     <link rel="stylesheet" href="css/alg1.css"> 
+    <link rel="Website Icon" type="png" href="images/logo.png">
     <script> function restartPage()
              { location.reload(); }</script>
   </head> 
   <body> 
+    <div class="overlay-hint">
+      <img class="overlay-image-desktop" src="../images/Algdes.png" alt="Overlay Image for Desktop">
+      <img class="overlay-image-mobile" src="../images/Algcp.png" alt="Overlay Image for Mobile">
+    </div>
+    <div class="skip-button" onclick="skipOverlay()">Skip</div>  
     <div class="game-container"> 
       <div class="header">
         <div class="left-buttons">
@@ -52,7 +58,7 @@
         </div> 
 
         <button id="dropdown-btn" onclick="toggleDropdown()" class="closed">
-            Show Rationale
+            Show Solution
             <svg class="dropdown-icon" id="dropdown-icon" onclick="toggleDropdown()"            viewBox="0 0 24 24" >
               
                 <path fill="currentColor" d="M7 10l5 5 5-5z"/>
