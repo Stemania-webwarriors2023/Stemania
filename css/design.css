@@ -1,33 +1,38 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins';
-    src: url('Poppins-Regular.ttf');
-    box-sizing: border-box;
-    }
+
+   }
 
 .header {
-    width: 100%;
-    height: 100vh;
-    padding-left: 11%;
-    padding-right: 8%;
-    position: relative;
-    background-image: url(WIN_20230302_14_25_25_Pro.jpg);
-    background-size: 1200px;
+    width: 90%;
+    padding-left: 9%;  
+    max-width: 90%;
+    
+      
 }
 
 body {
-    background-color: #474747;
-    font-family: 'Pangolin', cursive;
+    background-image: url("../images/home1.png");
+    background-repeat: no-repeat;
+    background-size: cover;       
+    font-family: 'Libre Franklin', sans-serif;
+    font-weight: 700;
+    max-width: 100%;
+    letter-spacing: 0.5px;
+    margin: 0;
+
 }
 
 .top-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0 15px;
+    padding: 20px 0px 20px;
     border-bottom: solid 2px rgb(255, 255, 255);
     font-style: bold;
+    font-family: 'Libre Franklin', sans-serif;
+    width: 100%;
 }
 
 .top-nav ul li {
@@ -35,33 +40,37 @@ body {
     display: inline-block;
     margin-left: 30px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     transition: 0.5s;
 }
 
 .top-nav ul li a {
     text-decoration: none;
-    color: #fff;
-    font-size: 20px;
+    font-size: 15px;
     color: white;
     font-style: 700;
     transition: 0.7s;
+    margin-bottom: 1px;
 }
 
 .top-nav ul li a:hover {
     color: #1e433a;
 }
 
-.button-container {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    justify-content: flex-end; 
+.container {
+    display: flex;        
+    height: auto;  
+    max-width: 90%;
 }
 
+.container2 { 
+     display: flex; 
+     flex-direction: column; 
+     max-width: 800px;
+     }
 
-button {
-    --color: #00A97F;
+#start {
+    --color:  #55acff;
     padding: 0.8em 1.7em;
     background-color: transparent;
     border-radius: 5px;
@@ -76,11 +85,11 @@ button {
     text-transform: uppercase;
     color: var(--color);
     z-index: 1;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
-button::before,
-button::after {
+#start::before,
+#start::after {
     content: '';
     display: block;
     width: 50px;
@@ -93,30 +102,35 @@ button::after {
     transition: 1s ease;
 }
 
-button::before {
+#start::before {
     top: -1em;
     left: -1em;
 }
 
-button::after {
+#start::after {
     left: calc(100% + 1em);
     top: calc(100% + 1em);
 }
 
-button:hover::before,
-button:hover::after {
+#start:hover::before,
+#start:hover::after {
     height: 410px;
     width: 410px;
 }
 
-button:hover {
+#start:hover {
     color: rgb(10, 25, 30);
 }
 
-button:active {
+#start:active {
     filter: brightness(.8);
 }
 
+#button{
+     margin-top: 130px;
+     margin-left: 300px;
+    }
+    
 .side-nav {
     position: fixed;
     left: 0;
@@ -131,20 +145,11 @@ button:active {
     background: linear-gradient(rgb(216, 16, 16), rgb(56, 139, 167), rgb(184, 132, 132), rgb(207, 7, 7));
     background-size: 100% 500%;
     background-position: 0 40%;
+    font-family: 'aBlackLives';
+    z-index: 1;
 }
 
-.side-nav:hover {
-    animation: backcolor 20s linear infinite reverse;
-}
 
-@keyframes backcolor {
-    0% {
-        background-position: 0 0%;
-    }
-    0% {
-        background-position: 0 400%;
-    }
-}
 
 .side-nav .logo {
     width: 60px;
@@ -157,13 +162,18 @@ button:active {
     transform: rotate(-90deg) translateX(50%);
     width: max-content;    
     font-size: 50px;
+    padding-left: 100px;
 }
 
+span {
+    color: #55acff;
+}
 .text-box {
-    margin-top: 10px;
+   margin-top: 100px;
     font-size: 18px;
     color: white;
-    margin-left: 50px;   
+    margin-left: 80px;  
+    
 }
 
 .text-box h1  {
@@ -174,8 +184,10 @@ font-weight: 500;
     margin-bottom: 10px;
 }
 
-span {
-    color: #00A97F;
+.text-box p {
+    text-align: center;
+    color: white;
+    font-family: 'Libre Franklin';
 }
 
 button a {
@@ -192,15 +204,169 @@ button a:hover {
     margin-bottom: 10px;
 }
 
-.image {
-    width: 500px;
-    height: auto; 
-    margin-left: 2px;
+#image {    
+    width: 350px;
+    height: 550px; 
+    margin-left: 0;
     margin-bottom: 40px;
+    margin-top: 0;    
 }
 
 #title{
-    font-size: 50px;
+    font-size: 80px;
     font-weight: bold;
+    font-family: 'aBlackLives';
+}
+
+@font-face { 
+    font-family: 'aBlackLives'; 
+    src: url('../fonts/aBlackLives.ttf') format('truetype'); 
+     }
+
+
+     
+     #about {
+            margin-top: 80px;
+            padding: 50px;
+            text-align: center;
+            width: 90%;
+        }
+        
+        #about h2 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        #about p {
+            font-size: 14px;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+   #about .features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+#about .feature {           
+    flex-basis: 33.33%;
+    padding: 0 20px;   
+}
+
+#about .feature img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+#about .feature h3 {
+    font-size: 20px;
+    color: rgb(140, 173, 220);
+    margin-bottom: 10px;
+}
+
+#about .feature p {
+    font-size: 13px;
+    color: white;
+}
+
+#contacts {
+    padding-top: 80px;  
+    padding-bottom: 70px;
+}
+
+.contact-item p {
+    margin-top: 10px;
+}
+
+
+#contacts h3 {
+    color: white;
+}
+
+        
+        #mission-vision {
+            background-color: #ffffff;
+            padding: 50px;
+            text-align: center;
+            width: 90%;
+            border-radius: 10px;
+        }
+        
+        #mission-vision h2 {
+            font-size: 20px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        
+        #mission-vision p {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #666666;
+            margin-bottom: 30px;
+        }
+        
+#faqs {
+    padding-top: 100px;
+
+}
+
+        .faq-button {
+            background-color: #eee;
+            color: #333;
+            width: 90%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+          }
+      
+          .faq-button:hover {
+            background-color: #ddd;
+          }
+      
+          .faq-item .content {
+            display: none;
+            padding: 10px;
+          }
+
+          .faq-item {
+            border-radius: 10px;
+          }
+
+          footer {
+            width: 100% ;
+            padding: 20px;
+            text-align: center;
+            background-color: #141515;
+            color: white;
+            font-size: 14px;
+            font-family: 'Libre Franklin', sans-serif;
+            font-weight: 700;
+        }
+        
+        .footer-container {
+            max-width: 100%;
+            margin: 0 ;
+        }
+        
+        .footer-container p {
+            margin: 0;
+        }
+        
+        
+        
+.imglogo {
+    width: 500px;
+    height: auto;
 }
 
