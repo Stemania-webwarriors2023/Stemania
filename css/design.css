@@ -370,3 +370,16 @@ button a:hover {
     height: auto;
 }
 
+.video-wrapper {
+  text-align: center;
+  margin-bottom: 35px;
+  margin-top: 20px;
+  
+}
+
+video {
+  display: inline-block;
+  width: 350px;
+  height:auto;
+}
+
