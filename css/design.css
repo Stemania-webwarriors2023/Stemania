@@ -427,6 +427,11 @@ video {
     margin-right: 5px;
 }
 
+    
+.top-nav ul li a{
+    font-size: 12px;
+}
+    
 .text-box {
    margin-top: 135px;
     font-size: 14px;
