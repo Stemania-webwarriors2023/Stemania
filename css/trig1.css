@@ -19,7 +19,7 @@ body {
     z-index: 9999;
   }
 
-  /* Styles for the skip button */
+  
   .skip-button {
 position: fixed;
 bottom: 10px;
