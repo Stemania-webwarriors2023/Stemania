@@ -19,7 +19,7 @@ body {
     z-index: 9999;
   }
 
-  /* Styles for the skip button */
+  
   .skip-button {
 position: fixed;
 bottom: 10px;
@@ -415,15 +415,20 @@ text-align: center;
   }
 
  
-  #play-button:before {
-   content: "Play ▶";
+#play-button:before {
+   content: "\f04b  Play";
+   font-family: "Font Awesome 5 Free";
 }
 
+
   #return:before {
-    content: "↩ Return";}
+    content: "\f060  Return"; 
+   font-family: "Font Awesome 5 Free";
+}
 
   #restart:before {
-    content:"Restart ↻"
+    content: "\f01e  Restart"; 
+   font-family: "Font Awesome 5 Free";
   }
   
   .sound-icon {
@@ -657,14 +662,21 @@ margin-top: 0px;
 } 
 
 #play-button:before {
-  content: "▶";
+  content: "\f04b";
+   font-family: "Font Awesome 5 Free";
+   font-size: 30px;
 }
 
  #return:before {
-   content: "↩";}
+   content: "\f060"; 
+   font-family: "Font Awesome 5 Free";
+}
 
  #restart:before {
-   content:"↻"
+   content: "\f01e"; 
+   font-family: "Font Awesome 5 Free";
+   font-size: 30px;
+  
  }
 
 
