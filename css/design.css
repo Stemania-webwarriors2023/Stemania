@@ -1,7 +1,7 @@
 * {
     margin: 0;
-    padding: 0;
-
+    padding: 0;     
+    
    }
 
 .header {
@@ -54,7 +54,7 @@ body {
 }
 
 .top-nav ul li a:hover {
-    color: #1e433a;
+    color: #3c2bff;
 }
 
 .container {
@@ -141,7 +141,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    padding: 50px 0;
+    padding: 40px 0;
     background: linear-gradient(rgb(216, 16, 16), rgb(56, 139, 167), rgb(184, 132, 132), rgb(207, 7, 7));
     background-size: 100% 500%;
     background-position: 0 40%;
@@ -212,6 +212,12 @@ button a:hover {
     margin-top: 0;    
 }
 
+
+#image img {
+    width: 350px;
+    height: 550px;     
+}
+
 #title{
     font-size: 80px;
     font-weight: bold;
@@ -247,7 +253,6 @@ button a:hover {
    #about .features {
     display: flex;
     justify-content: center;
-    align-items: center;
     margin-bottom: 50px;
 }
 
@@ -346,6 +351,7 @@ button a:hover {
           footer {
             width: 100% ;
             padding: 20px;
+            padding-bottom: 80px;
             text-align: center;
             background-color: #141515;
             color: white;
@@ -381,5 +387,192 @@ video {
   display: inline-block;
   width: 350px;
   height:auto;
+}
+
+@media (max-width: 748px) {
+ .side-nav {
+    width: 40px;
+    height: 100%;
+    background-size: 100% 500%;
+    background-position: 0 40%;    
+    z-index: 1;
+    position: fixed;
+    padding: 25px 0;
+    
+}
+
+
+
+.side-nav .logo {
+    width: 30px;
+    cursor: pointer;
+    right: 0;       
+}
+
+.side-nav a {
+    text-decoration: none;
+    width: max-content;    
+    font-size: 35px;
+    padding-left: 60px;   
+}
+
+.top-nav {
+    padding: 10px;
+    width: 90%;
+    }
+
+.top-nav ul li {
+    margin-left: 10px;       
+}
+
+.text-box {
+   margin-top: 135px;
+    font-size: 14px;
+    color: white;
+    margin-left: 15px;  
+    width: 250px;
+    z-index: 9;
+}
+
+.text-box p {    
+    color: white;
+    margin-right: 40px;
+    font-family: 'Libre Franklin';
+}
+
+#button {
+     margin-top: 250px;
+     margin-left: 110px;
+     z-index: 99;
+    }
+    
+#image {        
+    right: 0;
+    
+    margin-bottom: 40px;
+    margin-top: 17px;    
+    position: absolute; 
+    z-index: 1;    
+    width: 200px;
+    height: 440px;
+    overflow-x: hidden;
+    
+}
+
+#image img {
+    width: 230px;
+    height: 440px;     
+}
+
+
+.imglogo {
+    width: 240px;
+    height: auto;
+    
+}
+
+#about {
+            margin-top: 70px;
+            padding: 11px;
+            text-align: center;
+            width: 93%;         
+            padding-right: 9px;  
+            padding-left: 16px;
+            
+        }
+        
+        #about h2 {
+            font-size: 15px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        #about p {
+            font-size: 12px;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+   
+
+
+
+      
+   #about .features {
+    display: flex;
+    justify-content: center;    
+    margin-bottom: 50px;
+    
+}
+
+#about .feature {              
+    padding: 0 5px;   
+    font-size: 10px;
+    top: 0;
+    margin-top: 0;
+}
+
+#about .feature img {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+#about .feature h3 {
+    font-size: 20px;
+    color: rgb(140, 173, 220);
+    margin-bottom: 10px;
+}
+
+#about .feature p {
+    font-size: 10px;
+    color: white;
+    text-align: justify;
+}
+
+video {
+  display: inline-block;
+  width: 287px;
+  height:auto;
+}
+
+ #mission-vision {           
+            
+            padding: 17px;         
+            width: 270px;            
+        }
+        
+        #mission-vision h2 {
+            font-size: 20px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        #mission-vision p {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #666666;
+            margin-bottom: 10px;
+        }
+        
+footer {
+            width:87% ;
+            padding: 20px;
+            padding-bottom: 35px;
+            font-size: 14px;         
+        }
+        
+#faqs {
+    padding-top: 50px;
+}
+
+#contacts {
+    padding-top: 30px;  
+    padding-bottom: 25px;
+}
+
+
+
 }
 
