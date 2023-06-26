@@ -29,7 +29,6 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 0px 20px;
-    border-bottom: solid 2px rgb(255, 255, 255);
     font-style: bold;
     font-family: 'Libre Franklin', sans-serif;
     width: 100%;
@@ -207,7 +206,7 @@ button a:hover {
 #image {    
     width: 350px;
     height: 550px; 
-    margin-left: 0;
+    margin-left: 170px;
     margin-bottom: 40px;
     margin-top: 0;    
 }
