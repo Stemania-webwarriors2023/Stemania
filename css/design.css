@@ -72,7 +72,7 @@ body {
     --color:  #55acff;
     padding: 0.8em 1.7em;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 25%;
     position: relative;
     overflow: hidden;
     cursor: pointer;
@@ -80,7 +80,7 @@ body {
     font-weight: 400;
     font-size: 17px;
     border: 1px solid;
-    font-family: inherit;
+    font-family: 'Pangolin';
     text-transform: uppercase;
     color: var(--color);
     z-index: 1;
