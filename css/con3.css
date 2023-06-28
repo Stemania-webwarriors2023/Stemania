@@ -19,12 +19,12 @@ body {
   }
   
   #video-player {
-    width: 60%;
+    width: 53%;
     height: auto;
     margin: 0 auto;
     display: block;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 0;
   }
 
 
@@ -112,7 +112,7 @@ body {
   }
   
   #page {
-    max-width: 800px;
+    max-width: 90%;
     font-family: 'Pangolin';
     font-size: 20px;
     background: #fff;
@@ -357,18 +357,18 @@ text-align: center;
  
 #play-button:before {
    content: "\f04b  Play";
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
 }
 
 
   #return:before {
     content: "\f060  Return"; 
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
 }
 
   #restart:before {
     content: "\f01e  Restart"; 
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
   }
   
   .sound-icon {
