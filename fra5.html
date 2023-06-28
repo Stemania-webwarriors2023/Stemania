@@ -80,7 +80,14 @@
     <button id="soundButton" class="sound-on" onclick="toggleSound()">
   <span id="soundIcon" class="sound-icon"></span>
 </button>
-    
+<div id="black-overlay">
+  <video id="overlay-vid">
+    <source src="ani/fraC.mp4"media="(min-width: 768px)">
+    <source src="ani/fraCmob.mp4" media="(max-width: 767px)">
+  </video>
+  <button id="overlay-button" style="display: none;">GO TO OTHER TOPICS</button>
+  <a id="close-overlay">X</a>
+</div>
     <script src="fra5.js"></script> 
   </body> 
 </html>
