@@ -19,14 +19,13 @@ body {
   }
   
   #video-player {
-    width: 60%;
+    width: 53%;
     height: auto;
     margin: 0 auto;
     display: block;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-top: 0;
   }
-
 
 .header  {
       position: absolute;
@@ -38,6 +37,7 @@ body {
       flex-direction: column;
       align-items: center;
       margin-left: 60px;
+      font-family: 'Pangolin', cursive;
     }
   
   
@@ -72,6 +72,7 @@ body {
     width: 100%;
     position: relative;
     box-sizing: border-box;
+    font-size: 19px;
   }
   
 .left-buttons button:after {
@@ -112,7 +113,7 @@ body {
   }
   
   #page {
-    max-width: 800px;
+    max-width: 90%;
     font-family: 'Pangolin';
     font-size: 20px;
     background: #fff;
@@ -357,18 +358,17 @@ text-align: center;
  
   #play-button:before {
    content: "\f04b  Play";
-   font-family: "Font Awesome 5 Free";
-}
-
+   font-family: "Font Awesome 5 Free", 'Pangolin';
+  }
 
   #return:before {
     content: "\f060  Return"; 
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
 }
 
   #restart:before {
     content: "\f01e  Restart"; 
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
   }
   
   .sound-icon {
@@ -572,6 +572,127 @@ align-items: center;
  .back-button:active {
   padding-bottom: 10px;
  }       
+
+ #black-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  z-index: 9999;
+}
+
+#overlay-vid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 1000px;
+  height: auto;
+  outline: none;
+}
+
+#overlay-button {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s, transform .5s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  animation: float 3s ease-in-out infinite;
+  text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 40px;
+  margin-bottom: 40px;
+  font-family: 'Pangolin';
+}
+
+#overlay-button:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#overlay-button:hover:not(:disabled) {
+  filter: brightness(1);
+  box-shadow: none;
+  text-shadow: 0 0 10px #FFFFFF, 0 0 20px #FFFFFF, 0 0 30px #FFFFFF, 0 0 40px #FFFFFF;
+}
+
+#overlay-buttonn:disabled {
+  cursor: auto;
+}
+
+#overlay-button:active:after {
+  border-width: 0 0 0px;
+}
+
+#overlay-button:active {
+  padding-bottom: 10px;
+}
+
+#overlay-button:main, button:focus {
+  user-select: auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+#close-overlay {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  cursor: pointer;
+  font-family: 'Pangolin';
+  font-size: 20px;
+  top: 0;
+  left: 0;
+  margin-top: 190px;
+  margin-left: 20px;
+}
+
         @media (max-width: 748px) {
 #video-player {
   width: 100%;
@@ -744,7 +865,14 @@ margin-top: 0px;
     display: inline;               
              }
 #page{
-   margin-top: 20px;}              
+   margin-top: 20px;}   
+   
+#overlay-button{
+  bottom: 0;
+  right: 0;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
    }
    
 body{
