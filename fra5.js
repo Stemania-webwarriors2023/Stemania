@@ -32,7 +32,7 @@ answerOptions.addEventListener('click', function(event) {
         setTimeout(function() {
           blackOverlay.style.display = 'block';
           overlayVideo.play();
-        }, 2000);
+        }, 1000);
       }
     };
 
