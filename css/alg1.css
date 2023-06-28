@@ -417,19 +417,20 @@ text-align: center;
 
  #play-button:before {
    content: "\f04b  Play";
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
 }
 
 
   #return:before {
     content: "\f060  Return"; 
-   font-family: "Font Awesome 5 Free";
+   font-family: "Font Awesome 5 Free", 'Pangolin';
 }
 
   #restart:before {
     content: "\f01e  Restart"; 
-   font-family: "Font Awesome 5 Free";
-      }
+   font-family: "Font Awesome 5 Free", 'Pangolin';
+}
+
 
   
   .sound-icon {
