@@ -1,7 +1,13 @@
 let video = document.querySelector('#video-player');
+let blackOverlay = document.getElementById('black-overlay');
+let overlayVideo = document.getElementById('overlay-vid');
 let playButton = document.querySelector('#play-button');
 let answerOptions = document.querySelector('#answer-options');
-let dropdownButton = document.getElementById("dropdown-btn");
+let dropdownButton = document.getElementById('dropdown-btn');
+let overlayButton = document.getElementById('overlay-button');
+let closeOverlayButton = document.getElementById('close-overlay');
+let desktopVideoSrc = 'ani/fraC.mp4';
+let mobileVideoSrc = 'ani/fraCmob.mp4';
 
 playButton.addEventListener('click', function() {
   video.play();
@@ -22,6 +28,11 @@ answerOptions.addEventListener('click', function(event) {
       if (!isCorrectAnswer) {
         video.src = 'ani/fra5.mp4';
         video.play();
+      } else {
+        setTimeout(function() {
+          blackOverlay.style.display = 'block';
+          overlayVideo.play();
+        }, 2000);
       }
     };
 
@@ -30,6 +41,39 @@ answerOptions.addEventListener('click', function(event) {
     });
   }
 });
+
+// Close the black overlay when the overlay video finishes playing
+overlayVideo.addEventListener('ended', function() {
+  blackOverlay.style.display = 'block';
+  overlayButton.style.display = 'block';
+});
+
+// Button click event to navigate to another HTML page
+overlayButton.addEventListener('click', function() {
+  // Replace "other-page.html" with the actual path of the target HTML page
+  window.location.href = 'category.html';
+});
+
+// Button click event to close the overlay
+closeOverlayButton.addEventListener('click', function() {
+  blackOverlay.style.display = 'none';
+});
+
+// Update video source based on media query
+function updateOverlayVideoSource() {
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    overlayVideo.src = desktopVideoSrc;
+  } else {
+    overlayVideo.src = mobileVideoSrc;
+  }
+}
+
+// Call the function initially to set the appropriate video source
+updateOverlayVideoSource();
+
+// Update video source whenever the window is resized
+window.addEventListener('resize', updateOverlayVideoSource);
+
 
 var soundEnabled = true;
 var soundButton = document.getElementById("soundButton");
