@@ -1,7 +1,10 @@
 let video = document.querySelector('#video-player');
 let playButton = document.querySelector('#play-button');
+let nextButton = document.querySelector('#next-button');
 let answerOptions = document.querySelector('#answer-options');
 let dropdownButton = document.getElementById("dropdown-btn");
+
+nextButton.style.display = 'none';
 
 playButton.addEventListener('click', function() {
   video.play();
@@ -19,7 +22,9 @@ answerOptions.addEventListener('click', function(event) {
     video.onended = function() {
       event.target.checked = false;
       document.querySelector(resultClass).style.display = 'none';
-      if (!isCorrectAnswer) {
+      if (isCorrectAnswer) {
+        nextButton.style.display = 'block';
+      } else {
         video.src = 'ani/pyth3.mp4';
         video.play();
       }
@@ -29,6 +34,10 @@ answerOptions.addEventListener('click', function(event) {
       video.play();
     });
   }
+});
+
+nextButton.addEventListener('click', function() {
+  window.location.href = 'pyth4.html';
 });
 
 var soundEnabled = true;

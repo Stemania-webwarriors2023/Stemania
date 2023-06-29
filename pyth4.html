@@ -1,0 +1,89 @@
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <title>Stemania | Pythagorean Theorem</title>
+    <link rel="stylesheet" href="css/pyth4.css"> 
+    <link rel="Website Icon" type="png" href="images/logo.png">
+    <script> function restartPage()
+             { location.reload(); }</script>
+  </head> 
+  <body> 
+    <div class="game-container"> 
+      <div class="header">
+        <div class="left-buttons">
+          <div id="lefty">       
+        <a href="category.html">
+         <button id="return">             
+         </button>              
+        </a> 
+        </div>
+        <span id="problemtitle">
+            Pythagorean  <br> Theorem Problem #4
+        </span>
+        <div id="righty">       
+        <button id="play-button"></button> 
+        <button id="restart" onclick="restartPage()"></button>
+      </div>
+    </div>
+  </div>
+      <video id="video-player" autoplay >  
+        <source src="ani/pyth4.mp4" type="video/mp4"> 
+      </video> 
+      <div id="page">
+        <div class="info">
+          <h6 id="question">A teacher gives an assignment to the class. Asking to find the missing side length of the triangle. Leave the answer in the simplest radical form. The length of the leg of a right triangle is 8ft and 3ft, then the length of the hypotenuse is?
+          </h6>
+          <span class="steps">4/5</span>
+        </div>
+        <div id="answer-options" class="radio-input">
+          <input type="radio" id="value-1" name="value-radio" value="value-1">
+          <label for="value-1">√8.54 ft
+</label>
+          <input type="radio" id="value-2" name="value-radio" value="value-2">
+          <label for="value-2">√7.36 ft
+</label>
+          <input type="radio" id="value-3" name="value-radio" value="value-3">
+          <label for="value-3">√5 ft
+</label>
+          <input type="radio" id="value-4" name="value-radio" value="value-4">
+          <label for="value-4">√9.8 ft
+</label>
+          <span class="result success">Congratulations!</span>
+          <span class="result error">Bad answer</span>
+     
+        </div> 
+
+        <button id="dropdown-btn" onclick="toggleDropdown()" class="closed">
+            Show Solution
+            <svg class="dropdown-icon" id="dropdown-icon" onclick="toggleDropdown()"            viewBox="0 0 24 24" >
+              
+                <path fill="currentColor" d="M7 10l5 5 5-5z"/>
+            </svg>
+        </button> 
+        <ul id="dropdown-list">
+            <li onclick="openVideoPopup('rationale/pyth4E.mp4')">English<span class="arrow">▶</span></li>
+            <li onclick="openVideoPopup('rationale/pyth4T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
+ <div id="video-popup-overlay">
+      <div id="video-popup-container">
+           <video id="video-popup-player" controls>               
+           </video>
+            <button id="close-video-popup" onclick="closeVideoPopup()">Close</button> 
+            </div>            
+     </div>  
+   
+     <div> <button id="next-button" style="display: none;">Next❯</button> </div>
+    </div>  
+    <button class="back-button" onclick="goBack()">❮Previous</button> 
+    <button id="soundButton" class="sound-on" onclick="toggleSound()">
+  <span id="soundIcon" class="sound-icon"></span>
+</button>
+    
+    <script src="pyth4.js"></script> 
+  </body> 
+</html>
