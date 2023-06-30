@@ -6,8 +6,8 @@ let answerOptions = document.querySelector('#answer-options');
 let dropdownButton = document.getElementById('dropdown-btn');
 let overlayButton = document.getElementById('overlay-button');
 let closeOverlayButton = document.getElementById('close-overlay');
-let desktopVideoSrc = 'ani/unconC.mp4';
-let mobileVideoSrc = 'ani/unconCmob.mp4';
+let desktopVideoSrc = 'ani/conC.mp4';
+let mobileVideoSrc = 'ani/conCmob.mp4';
 
 playButton.addEventListener('click', function() {
   video.play();
