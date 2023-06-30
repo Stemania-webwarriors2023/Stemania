@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    <title>Stemania | Unit Conversion</title>
-    <link rel="stylesheet" href="css/con3.css"> 
+    <title>Stemania | Fractions</title>
+    <link rel="stylesheet" href="css/con5.css"> 
     <link rel="Website Icon" type="png" href="images/logo.png">
     <script> function restartPage()
              { location.reload(); }</script>
@@ -17,44 +17,43 @@
     <div class="game-container"> 
       <div class="header">
         <div class="left-buttons">
-          <div id="lefty">        
-          <a href="category.html">
-         <button id="return"></button>                   
-          </a> 
-        </div>  
-          <span id="problemtitle">
-            Unit Conversion <br> Problem #4
+          <div id="lefty">       
+        <a href="category.html">
+             <button id="return"></button>  
+              </a>   
+        </div>
+        <span id="problemtitle">
+            Unit Conversion <br> Problem #5
         </span>
-           <div id="righty">       
+         <div id="righty">       
         <button id="play-button"></button> 
         <button id="restart" onclick="restartPage()"></button>
       </div>
     </div>
   </div>
       <video id="video-player" autoplay >  
-        <source src="ani/uncon4.mp4" type="video/mp4"> 
+        <source src="ani/uncon5.mp4" type="video/mp4"> 
       </video> 
       <div id="page">
         <div class="info">
-          <h6 id="question">
-            To prepare for a bicycle race, Celeste wants to ride her bicycle for 20 miles. The app she is using to track her distance only cites distance in kilometers.Using the conversion that 1 kilometer= 0.62 miles which of the following is closes to the exact number of kilometers she should ride?
+          <h6 id="question"> Sam wants to buy 20 pounds of meat in the meat shop however the scale is on kg, how many kg does he need for 20 pounds of meat?
           </h6>
-          <span class="steps">3/5</span>
+          <span class="steps">5/5</span>
         </div>
         <div id="answer-options" class="radio-input">
           <input type="radio" id="value-1" name="value-radio" value="value-1">
-          <label for="value-1">15 km
+          <label for="value-1">9.07 kg
 </label>
           <input type="radio" id="value-2" name="value-radio" value="value-2">
-          <label for="value-2">21 km
+          <label for="value-2">8.07 kg
 </label>
           <input type="radio" id="value-3" name="value-radio" value="value-3">
-          <label for="value-3">34 km
+          <label for="value-3">7.07 kg
 </label>
           <input type="radio" id="value-4" name="value-radio" value="value-4">
-          <label for="value-4">32 km
+          <label for="value-4">10.07 kg
 </label>
-          <span class="result success">Congratulations!</span>         
+          <span class="result success">Congratulations!</span>
           <span class="result error">Bad answer</span>
      
         </div> 
@@ -67,23 +66,28 @@
             </svg>
         </button> 
         <ul id="dropdown-list">
-            <li onclick="openVideoPopup('rationale/con4E.mp4')">English<span class="arrow">▶</span></li>
-            <li onclick="openVideoPopup('rationale/con4T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
+            <li onclick="openVideoPopup('rationale/con5E.mp4')">English<span class="arrow">▶</span></li>
+            <li onclick="openVideoPopup('rationale/con5T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
  <div id="video-popup-overlay">
       <div id="video-popup-container">
            <video id="video-popup-player" controls>               
            </video>
             <button id="close-video-popup" onclick="closeVideoPopup()">Close</button> 
             </div>            
-     </div>  
-   
-     <div> <button id="next-button" style="display: none;">Next❯</button> </div>
-    </div>  
- <button class="back-button" onclick="goBack()">❮Previous</button>   
+     </div>     
+         </div>  
+    <button class="back-button" onclick="goBack()">❮Previous</button> 
     <button id="soundButton" class="sound-on" onclick="toggleSound()">
   <span id="soundIcon" class="sound-icon"></span>
-</button>    
-    <script src="con4.js"></script> 
+</button>
+<div id="black-overlay">
+  <video id="overlay-vid">
+    <source src="ani/unconC.mp4"media="(min-width: 768px)">
+    <source src="ani/unconCmob.mp4" media="(max-width: 767px)">
+  </video>
+  <button id="overlay-button" style="display: none;">GO TO OTHER TOPICS</button>
+  <a id="close-overlay">X</a>
+</div>
+    <script src="con5.js"></script> 
   </body> 
 </html>
-

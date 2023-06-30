@@ -1,10 +1,13 @@
 let video = document.querySelector('#video-player');
+let blackOverlay = document.getElementById('black-overlay');
+let overlayVideo = document.getElementById('overlay-vid');
 let playButton = document.querySelector('#play-button');
-let nextButton = document.querySelector('#next-button');
 let answerOptions = document.querySelector('#answer-options');
-let dropdownButton = document.getElementById("dropdown-btn");
-
-nextButton.style.display = 'none';
+let dropdownButton = document.getElementById('dropdown-btn');
+let overlayButton = document.getElementById('overlay-button');
+let closeOverlayButton = document.getElementById('close-overlay');
+let desktopVideoSrc = 'ani/unconC.mp4';
+let mobileVideoSrc = 'ani/unconCmob.mp4';
 
 playButton.addEventListener('click', function() {
   video.play();
@@ -12,9 +15,9 @@ playButton.addEventListener('click', function() {
 
 answerOptions.addEventListener('click', function(event) {
   if (event.target.tagName === 'INPUT') {
-    let isCorrectAnswer = event.target.value === 'value-4';
+    let isCorrectAnswer = event.target.value === 'value-1';
     let resultClass = isCorrectAnswer ? '.result.success' : '.result.error';
-    let nextVideo = isCorrectAnswer ? 'ani/uncon4O.mp4' : 'ani/uncon4X.mp4';
+    let nextVideo = isCorrectAnswer ? 'ani/uncon5O.mp4' : 'ani/uncon5X.mp4';
 
     video.src = nextVideo;
     document.querySelector(resultClass).style.display = 'flex';
@@ -22,11 +25,14 @@ answerOptions.addEventListener('click', function(event) {
     video.onended = function() {
       event.target.checked = false;
       document.querySelector(resultClass).style.display = 'none';
-      if (isCorrectAnswer) {
-        nextButton.style.display = 'block';
-      } else {
-        video.src = 'ani/uncon4.mp4';
+      if (!isCorrectAnswer) {
+        video.src = 'ani/uncon5.mp4';
         video.play();
+      } else {
+        setTimeout(function() {
+          blackOverlay.style.display = 'block';
+          overlayVideo.play();
+        }, 1000);
       }
     };
 
@@ -36,9 +42,34 @@ answerOptions.addEventListener('click', function(event) {
   }
 });
 
-nextButton.addEventListener('click', function() {
-  window.location.href = 'con5.html';
+
+overlayVideo.addEventListener('ended', function() {
+  blackOverlay.style.display = 'block';
+  overlayButton.style.display = 'block';
 });
+
+
+overlayButton.addEventListener('click', function() {
+  window.location.href = 'category.html';
+});
+
+closeOverlayButton.addEventListener('click', function() {
+  blackOverlay.style.display = 'none';
+});
+
+function updateOverlayVideoSource() {
+  if (window.matchMedia('(min-width: 768px)').matches) {
+    overlayVideo.src = desktopVideoSrc;
+  } else {
+    overlayVideo.src = mobileVideoSrc;
+  }
+}
+
+
+updateOverlayVideoSource();
+
+window.addEventListener('resize', updateOverlayVideoSource);
+
 
 var soundEnabled = true;
 var soundButton = document.getElementById("soundButton");
