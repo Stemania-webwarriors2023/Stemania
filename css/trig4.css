@@ -341,16 +341,16 @@ text-align: center;
     color: red;
   }
 
-  .radio-input input[value="value-1"]:checked + label {
+  .radio-input input[value="value-3"]:checked + label {
     border-color: rgb(22, 245, 22);
     color: rgb(16, 184, 16);
   }
 
-  .radio-input:has(input[value="value-1"]:checked) .result.success {
+  .radio-input:has(input[value="value-3"]:checked) .result.success {
     display: flex;
   }
 
-  .radio-input:has(input:not([value="value-1"]):checked ) .result.error {
+  .radio-input:has(input:not([value="value-3"]):checked ) .result.error {
     display: flex;
   }
 
