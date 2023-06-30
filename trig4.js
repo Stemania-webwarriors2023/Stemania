@@ -12,9 +12,9 @@ playButton.addEventListener('click', function() {
 
 answerOptions.addEventListener('click', function(event) {
   if (event.target.tagName === 'INPUT') {
-    let isCorrectAnswer = event.target.value === 'value-1';
+    let isCorrectAnswer = event.target.value === 'value-3';
     let resultClass = isCorrectAnswer ? '.result.success' : '.result.error';
-    let nextVideo = isCorrectAnswer ? 'ani/trig3O.mp4' : 'ani/trig3X.mp4';
+    let nextVideo = isCorrectAnswer ? 'ani/trig4O.mp4' : 'ani/trig4X.mp4';
 
     video.src = nextVideo;
     document.querySelector(resultClass).style.display = 'flex';
@@ -25,7 +25,7 @@ answerOptions.addEventListener('click', function(event) {
       if (isCorrectAnswer) {
         nextButton.style.display = 'block';
       } else {
-        video.src = 'ani/trig3.mp4';
+        video.src = 'ani/trig4.mp4';
         video.play();
       }
     };
@@ -37,7 +37,7 @@ answerOptions.addEventListener('click', function(event) {
 });
 
 nextButton.addEventListener('click', function() {
-  window.location.href = 'trig4.html';
+  window.location.href = 'trig5.html';
 });
 
 var soundEnabled = true;

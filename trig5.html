@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-    <title>Stemania | Trigonometry</title>
-    <link rel="stylesheet" href="css/trig3.css"> 
+    <title>Stemania | Fractions</title>
+    <link rel="stylesheet" href="css/trig5.css"> 
     <link rel="Website Icon" type="png" href="images/logo.png">
     <script> function restartPage()
              { location.reload(); }</script>
@@ -19,41 +19,39 @@
         <div class="left-buttons">
           <div id="lefty">       
         <a href="category.html">
-         <button id="return">             
-         </button>              
-        </a> 
+             <button id="return"></button>  
+              </a>   
         </div>
         <span id="problemtitle">
-            Trigonometry <br>Problem #3
+            Trigonometry <br>Problem #5
         </span>
-        <div id="righty">       
+         <div id="righty">       
         <button id="play-button"></button> 
         <button id="restart" onclick="restartPage()"></button>
       </div>
     </div>
   </div>
       <video id="video-player" autoplay >  
-        <source src="ani/trig3.mp4" type="video/mp4"> 
+        <source src="ani/trig5.mp4" type="video/mp4"> 
       </video> 
       <div id="page">
         <div class="info">
-          <h6 id="question"> Izzy was in their basement 42 meters below their living room. She wanted to be above, in their living room. She turned diagonally for 100 meters until she was above ground. What is the angle of elevation, in degrees, of Izzy's climb?
-
+          <h6 id="question"> A boy wants to see the bird, the tree is 324 m, and the distance of the boy is 54 m, At what angle, in degrees, is the boy looking?
           </h6>
-          <span class="steps">3/5</span>
+          <span class="steps">5/5</span>
         </div>
         <div id="answer-options" class="radio-input">
           <input type="radio" id="value-1" name="value-radio" value="value-1">
-          <label for="value-1">24.8°
+          <label for="value-1">79.9°
 </label>
           <input type="radio" id="value-2" name="value-radio" value="value-2">
-          <label for="value-2">20.4°
+          <label for="value-2">80.5°
 </label>
           <input type="radio" id="value-3" name="value-radio" value="value-3">
-          <label for="value-3">28.1°
+          <label for="value-3">81.0°
 </label>
           <input type="radio" id="value-4" name="value-radio" value="value-4">
-          <label for="value-4">32.5°
+          <label for="value-4">82.7°
 </label>
           <span class="result success">Congratulations!</span>
           <span class="result error">Bad answer</span>
@@ -68,25 +66,28 @@
             </svg>
         </button> 
         <ul id="dropdown-list">
-            <li onclick="openVideoPopup('rationale/trig3E.mp4')">English<span class="arrow">▶</span></li>
-            <li onclick="openVideoPopup('rationale/trig3T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
+            <li onclick="openVideoPopup('rationale/trig5E.mp4')">English<span class="arrow">▶</span></li>
+            <li onclick="openVideoPopup('rationale/trig5T.mp4')">Tagalog<span class="arrow">▶</span></li> </ul>
  <div id="video-popup-overlay">
       <div id="video-popup-container">
            <video id="video-popup-player" controls>               
            </video>
             <button id="close-video-popup" onclick="closeVideoPopup()">Close</button> 
             </div>            
-     </div>  
-   
-     <div> <button id="next-button" style="display: none;">Next❯</button> </div>
-    </div>  
+     </div>     
+         </div>  
     <button class="back-button" onclick="goBack()">❮Previous</button> 
     <button id="soundButton" class="sound-on" onclick="toggleSound()">
   <span id="soundIcon" class="sound-icon"></span>
 </button>
-    
-    <script src="trig3.js"></script> 
+<div id="black-overlay">
+  <video id="overlay-vid">
+    <source src="ani/trigC.mp4"media="(min-width: 768px)">
+    <source src="ani/trigCmob.mp4" media="(max-width: 767px)">
+  </video>
+  <button id="overlay-button" style="display: none;">GO TO OTHER TOPICS</button>
+  <a id="close-overlay">X</a>
+</div>
+    <script src="trig5.js"></script> 
   </body> 
 </html>
-
-
