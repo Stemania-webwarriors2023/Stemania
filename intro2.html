@@ -1,0 +1,160 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Stemania | Story</title>
+        <link rel="Website Icon" type="png" href="images/logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+<head>
+    <style>
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+
+#play-button {
+    appearance: button;
+    background-color: #1899D6;
+    border: solid transparent;
+    border-radius: 50%;
+    border-width: 0 0 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: .8px;
+    line-height: 20px;
+    margin: 3px;
+    outline: none;
+    overflow: visible;
+    padding: 10px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    touch-action: manipulation;
+    transform: translateZ(0);
+    transition: filter .2s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 1;
+    display: none;
+}
+
+#play-button:after {
+    background-clip: padding-box;
+    background-color: #1CB0F6;
+    border: solid transparent;
+    border-radius: 50%;
+    border-width: 0 0 4px;
+    bottom: -4px;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+#play-button:main,
+#play-button:focus {
+    user-select: auto;
+}
+
+#play-button:hover:not(:disabled) {
+    filter: brightness(1.1);
+}
+
+#play-button:disabled {
+    cursor: auto;
+}
+
+#play-button:active:after {
+    border-width: 0 0 0px;
+}
+
+#play-button:active {
+    padding-bottom: 4px;
+}
+
+#button {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.3;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    z-index: 1;   
+    padding: 10px;
+    font-size: 18px;
+    border: solid #6acbff;
+    border-radius: 10px;               
+    font-family: 'Pangolin';
+    background-color: #1899D6;
+    color: white; 
+    outline: none;
+}
+
+#button:hover {
+    opacity: 1;
+}
+
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video" autoplay >
+            <source src="ani/intro720.mp4" type="video/mp4">           
+        </video>
+        <button id="play-button"><i class="fas fa-play"></i></button>
+    </div>
+
+    <a href="category.html"> <button id="button">Continue...</button> </a> 
+
+    <script>
+        var video = document.getElementById('video');
+        var playButton = document.getElementById('play-button');
+        var button = document.getElementById('button');
+
+        video.addEventListener('playing', function () {
+            playButton.classList.add('hide');
+        });
+
+        video.addEventListener('ended', function () {
+            button.style.opacity = 1;
+        });
+
+        playButton.addEventListener('click', function () {
+            video.play();
+        });
+    </script>
+</body>
+</html>
