@@ -65,8 +65,7 @@ body {
     transform: translate(-50%, -50%);
     opacity: 1;
     transition: opacity 0.3s;
-    z-index: 1;
-    display: none;
+    z-index: 1;    
 }
 
 #play-button:after {
@@ -131,7 +130,7 @@ body {
 </head>
 <body>
     <div id="video-container">
-        <video id="video" autoplay >
+        <video id="video" autoplay poster="images/intro.png">
             <source src="ani/intro720.mp4" type="video/mp4">           
         </video>
         <button id="play-button"><i class="fas fa-play"></i></button>
