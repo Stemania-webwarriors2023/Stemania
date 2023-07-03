@@ -384,7 +384,7 @@ button a:hover {
 
 video {
   display: inline-block;
-  width: 450px;
+  width: 350px;
   height:auto;
 }
 
@@ -406,7 +406,7 @@ video {
 }
 
 .item img {
-  width: 50%;
+  width: 53%;
   height: auto;
 }
 
@@ -416,7 +416,7 @@ video {
 }
 
 #devs {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 30px;
     color: white;
@@ -635,16 +635,11 @@ footer {
  }
  
  #devs {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     margin-bottom: 15px;
     
     }
     
-video {
-  display: inline-block;
-  width: 350px;
-  height:auto;
-}
 }
 
