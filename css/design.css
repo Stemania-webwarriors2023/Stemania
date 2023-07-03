@@ -384,8 +384,41 @@ button a:hover {
 
 video {
   display: inline-block;
-  width: 350px;
+  width: 450px;
   height:auto;
+}
+
+.developer{
+  padding-bottom: 90px;
+  padding-top: 90px;
+}
+
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  width: 25%; 
+  text-align: center;
+  margin-bottom: 15px;  
+}
+
+.item img {
+  width: 50%;
+  height: auto;
+}
+
+.item h4 {
+  margin-top: 10px;
+  color: white;
+}
+
+#devs {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 @media (max-width: 748px) {
@@ -578,7 +611,39 @@ footer {
     padding-bottom: 25px;
 }
 
+.members {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
 
+  .item { 
+    margin: 20px;
+    width: 100px;
+    font-size: 14px;
+    
+  }
 
+ .item img{
+     border-radius: 8px;
+     width: 100px; 
+     height: auto;   
+ }
+ 
+ .item h4{
+     text-align: center;
+ }
+ 
+ #devs {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    
+    }
+    
+video {
+  display: inline-block;
+  width: 350px;
+  height:auto;
+}
 }
 
